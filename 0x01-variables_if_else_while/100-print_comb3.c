@@ -20,15 +20,13 @@ int main(void)
 			{
 				putchar(n);
 				putchar(i);
-				if (n + i != 17)
+				if (n != 56 && i != 57)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
-			i++;
 		}
-		n++;
 	}
 	putchar('\n');
 	return (0);
