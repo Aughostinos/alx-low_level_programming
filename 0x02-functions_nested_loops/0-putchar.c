@@ -8,9 +8,15 @@
  * Return: Always 0 (Success)
 */
 
-int _putchar(strg)
+int _putchar()
 {
-        printf("strg\n");
-      
-        return (0);
+	char str = "_putchar";
+	int i;
+
+	for (i = 0; i <= 7; i++)
+	{
+		_putchar(str[i]);
+	_putchar('\n');
+	}
+	return (0);
 }
