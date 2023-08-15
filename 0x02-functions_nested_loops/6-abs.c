@@ -3,7 +3,7 @@
 /**
  * _abs - function that calculate the absslute value of an int
  *
- * @int: paramete
+ * @n: paramete
  * Return: 0
 */
 
