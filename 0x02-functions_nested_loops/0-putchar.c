@@ -1,6 +1,5 @@
 #include <stdio.h>
-#ifndef main.h
-#define
+#include " main.h"
 /**
  * main - Entry point
  *
