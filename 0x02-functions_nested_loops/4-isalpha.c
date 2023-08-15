@@ -2,9 +2,9 @@
 
 /**
  * _isalpha - function checks if the input is letter or not
- * 
+ *
  * @c: the input of the function
- * 
+ *
  * Return: 1 if the input is a letter and 0 otherwise
 */
 
