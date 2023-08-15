@@ -3,6 +3,8 @@
 /**
  * print_sign - function prints the sign of the input number
  *
+ * @n: the input of print sign function
+ *
  * Return: 1 if n is positive - 0 if n == 0 - -1 if n is negative
 */
 
