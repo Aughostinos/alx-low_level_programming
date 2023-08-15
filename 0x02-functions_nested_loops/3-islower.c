@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _islower(int c) - check the code.
+ * _islower - check the code.
  *
  * @c: the input of the funcrtion
  *
