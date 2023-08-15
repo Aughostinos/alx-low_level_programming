@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_alphabet - 10 timmes in lower case using _putchar()
+ * print_alphabet_x10 - 10 timmes in lower case using _putchar()
 */
 
 void print_alphabet_x10(void)
