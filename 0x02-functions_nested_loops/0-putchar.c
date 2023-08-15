@@ -8,7 +8,7 @@
  * Return: Always 0 (Success)
 */
 
-int _putchar(char c)
+int _putchar(void)
 {
 	char str[] = "_putchar";
 	int i;
