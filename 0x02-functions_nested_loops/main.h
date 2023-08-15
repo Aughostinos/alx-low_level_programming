@@ -7,5 +7,5 @@
  *
  * Return: Always 0 (Success)
 */
-int _putchar(strg);
+int _putchar();
 #endif
