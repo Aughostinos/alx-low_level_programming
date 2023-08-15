@@ -1,11 +1,9 @@
 #include "main.h"
 
 /**
- *
  * _abs - function that calculate the absslute value of an int
  *
- * @int: parameter
- *
+ * @int: paramete
  * Return: 0
 */
 
