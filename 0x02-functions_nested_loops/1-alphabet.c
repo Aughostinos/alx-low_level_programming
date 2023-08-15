@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * 1-alphabet.c
+ * This code prints alphabet - in lower case
  *
 */
 
