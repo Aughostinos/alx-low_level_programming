@@ -1,4 +1,4 @@
-#incule "main.h"
+#inculde "main.h"
 
 /**
  * add - sum 2 numbers
