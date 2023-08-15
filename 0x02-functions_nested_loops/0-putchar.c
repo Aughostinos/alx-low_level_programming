@@ -8,7 +8,6 @@
  * Return: Always 0 (Success)
 */
 
-//Task 0
 int main(void)
 {
         printf("_putchar\n");
