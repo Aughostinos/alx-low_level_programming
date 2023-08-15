@@ -1,11 +1,7 @@
 #ifndef MAIN_H
 #define MAIN_H
 /**
- * main - Entry point
- *
- * Description: C program
- *
- * Return: Always 0 (Success)
-*/
+ * Header file
+ */
 int _putchar(void);
 #endif
