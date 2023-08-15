@@ -8,9 +8,9 @@
  * Return: Always 0 (Success)
 */
 
-int main()
+int _putchar(strg)
 {
-        printf("_putchar\n");
+        printf("strg\n");
       
         return (0);
 }
