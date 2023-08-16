@@ -2,7 +2,7 @@
 
 /**
  * main - entry pint
- * Return:
+ * Return: 0
 */
 
 int main(void)
