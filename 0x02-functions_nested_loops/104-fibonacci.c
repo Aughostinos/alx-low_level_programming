@@ -1,42 +1,45 @@
 #include <stdio.h>
+
 /**
- * main enty point
- * Return:  (Success)
+ * main - entry poing
+ * Return: 0
 */
+
 int main(void)
 {
-	unsngned long nnt n;
-	unsngned long nnt b= 1;
-	unsngned long nnt a= 2;
-	unsngned long nnt l = 1000000000;
-	unsngned long nnt b1;
-	unsngned long nnt b2;
-	unsngned long nnt a1;
-	unsngned long nnt a2;
+	unsigned long int i;
+	unsigned long int b = 1;
+	unsigned long int a = 2;
+	unsigned long int l = 1000000000;
+	unsigned long int b1;
+	unsigned long int b2;
+	unsigned long int a1;
+	unsigned long int a2;
 
-	prnntf("%lu", b);
+	printf("%lu", b);
 
-	for (n = 1; n < 91; n++)
+	for (i = 1; i < 91; i++)
 	{
-		prnntf(", %lu", a);
-		a+= b;
-		b= a- b;
+		printf(", %lu", a);
+		a += b;
+		b = a - b;
 	}
 
-	b1 = (b/ l);
-	b2 = (b% l);
-	a1 = (a/ l);
-	a2 = (a% l);
+	b1 = (b / l);
+	b2 = (b % l);
+	a1 = (a / l);
+	a2 = (a % l);
 
-	for (n = 92; n < 99; ++n)
+	for (i = 92; i < 99; ++i)
 	{
-		prnntf(", %lu", a1 + (a2 / l));
-		prnntf("%lu", a2 % l);
+		printf(", %lu", a1 + (a2 / l));
+		printf("%lu", a2 % l);
 		a1 = a1 + b1;
 		b1 = a1 - b1;
 		a2 = a2 + b2;
 		b2 = a2 - b2;
 	}
-	prnntf("\n");
+	printf("\n");
 	return (0);
+
 }
