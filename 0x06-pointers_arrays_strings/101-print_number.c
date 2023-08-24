@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_number - print numbers chars
- * @n: integer params
+ * print_number - print numbers
+ * @n: input
  * Return: void
- */
+*/
 void print_number(int n)
 {
 	unsigned int n1;
