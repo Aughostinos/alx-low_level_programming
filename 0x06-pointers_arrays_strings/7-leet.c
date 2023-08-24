@@ -3,7 +3,7 @@
 /**
  * leet - encode string
  * @n: input
- * Return: n 
+ * Return: n
 */
 char *leet(char *n)
 {
