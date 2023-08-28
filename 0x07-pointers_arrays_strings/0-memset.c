@@ -2,10 +2,10 @@
 
 /**
  * _memset - fills memory with a constant byte
- * @s: pointer 
- * @b: input param 
+ * @s: pointer
+ * @b: input param
  * @n: number of bytes
- * Return: pointer to the memory area s 
+ * Return: pointer to the memory area s
 */
 char *_memset(char *s, char b, unsigned int n)
 {
