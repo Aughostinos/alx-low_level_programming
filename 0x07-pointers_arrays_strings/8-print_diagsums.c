@@ -6,16 +6,21 @@
  * @a: input paeam
  * @size: param
  * Return: void
- */
+*/
 void print_diagsums(int *a, int size)
 {
-	int i, sum, sum2;
+	int sum1, sum2, y;
 
-	for (i = 0; i < size; i++)
+	sum1 = 0;
+	sum2 = 0;
+
+	for (y = 0; y < size; y++)
 	{
-		sum += a[i];
-		sum2 += a[size - i - 1];
-		a += size;
+		sum1 = sum1 + a[y * size + y];
 	}
-	printf("%d, %d\n", s, s2);
+	for (y = size - 1; y >= 0; y--)
+	{
+		sum2 += a[y * size + (size - y - 1)];
+	}
+	printf("%d, %d\n", sum1, sum2);
 }
