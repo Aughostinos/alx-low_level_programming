@@ -14,7 +14,7 @@ int _sqrt_recursion(int n)
 
 /**
  * sqr_rec - squere
- * @n: input bumber
+ * @j: input bumber
  * @i: input
  * Return: the resulting square root
  */
