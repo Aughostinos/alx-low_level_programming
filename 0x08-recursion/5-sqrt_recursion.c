@@ -22,7 +22,7 @@ int sqr_rec(int j, int i)
 {
 	if (i * i > j)
 		return (-1);
-	if (i * i == n)
+	if (i * i == j)
 		return (i);
 	return (sqr_rec(j, i + 1));
 }
