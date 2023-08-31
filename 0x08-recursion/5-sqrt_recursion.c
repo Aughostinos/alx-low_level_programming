@@ -2,6 +2,8 @@
 /**
  *  _sqrt_recursion - returns the natural square root of a number
  *  @n: input number
+ *  @i: input
+ *  @j: input
  *  Return: n power 2 or -1
  */
 int sqr_rec(int j, int i);
