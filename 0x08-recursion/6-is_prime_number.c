@@ -2,6 +2,7 @@
 /**
  * is_prime_number - check if the number is prime
  * @n: number to evaluate
+ * @i: input
  * Return: 1 or 0
  */
 int real_prime(int n, int i);
