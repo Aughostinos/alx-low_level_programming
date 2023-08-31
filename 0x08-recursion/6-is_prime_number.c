@@ -13,10 +13,9 @@ int is_prime_number(int n)
 }
 
 /**
- * real_prime - recursive function 
+ * real_prime - recursive function
  * @n: input
  * @i: input
- *
  * Return: 1 if n is prime, 0 if not
  */
 int real_prime(int n, int i)
