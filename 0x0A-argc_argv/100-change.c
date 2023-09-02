@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * main - entry point 
+ * main - entry point
  * @argc: counter
  * @argv: vector
  * Return: 0 (Success), 1 (Error)
