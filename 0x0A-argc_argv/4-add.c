@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ * main - entry point
+ * @argc: counter
+ * @argv: vector
+ * Return: 0
+ */
 int main(int argc, char *argv[]) {
     // Initialize a variable to store the sum
     int sum = 0;
@@ -13,7 +18,9 @@ int main(int argc, char *argv[]) {
     }
 
     // Loop through the arguments starting from argv[1] (argv[0] is the program name)
-    for (int i = 1; i < argc; i++) {
+    int i;
+
+    for (i = 1; i < argc; i++) {
         // Attempt to convert the argument to an integer
         int num = atoi(argv[i]);
 
