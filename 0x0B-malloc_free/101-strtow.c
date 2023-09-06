@@ -10,13 +10,13 @@ int word_counter(char *s)
 {
 	int n, j, i;
 
-	n= 0;
-	i= 0;
+	n = 0;
+	i = 0;
 
 	for (j = 0; s[j] != '\0'; j++)
 	{
 		if (s[j] == ' ')
-			n= 0;
+			n = 0;
 		else if (n == 0)
 		{
 			n = 1;
@@ -28,8 +28,8 @@ int word_counter(char *s)
 }
 /**
  * **strtow - splits a string into words
- * @str: string 
- * Return: pointer or NULL 
+ * @str: string
+ * Return: pointer or NULL
  */
 char **strtow(char *str)
 {
