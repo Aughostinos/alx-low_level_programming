@@ -4,7 +4,7 @@
  * argstostr -  concatenates all the arguments of your program
  * @ac: input
  * @av: pointer
- * Return: s
+ * Return: 0
  */
 char *argstostr(int ac, char **av)
 {
@@ -36,5 +36,4 @@ char *argstostr(int ac, char **av)
 		s[n++] = '\n';
 	}
 	}
-	return (s);
 }
