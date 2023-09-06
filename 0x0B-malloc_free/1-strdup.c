@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * _strdup - duplicates space 
- * @str: input 
+ * _strdup - duplicates space
+ * @str: input
  * Return: s
  */
 char *_strdup(char *str)
@@ -17,7 +17,7 @@ char *_strdup(char *str)
 	while (str[i] != '\0')
 		i++;
 
-	s= malloc(sizeof(char) * (i + 1));
+	s = malloc(sizeof(char) * (i + 1));
 
 	if (s == NULL)
 		return (NULL);
