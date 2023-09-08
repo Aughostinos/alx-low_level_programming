@@ -6,7 +6,7 @@
  * @s: input
  * @b: input
  * @n: input
- * Return: pointer 
+ * Return: pointe
 */
 char *setmemory(char *s, char b, unsigned int n)
 {
@@ -22,10 +22,9 @@ char *setmemory(char *s, char b, unsigned int n)
 
 /**
  * *_calloc - allocates memory for an array using mollac
- * @nmemb: number of elements in the array
- * @size: size of each element
- *
- * Return: pointer to allocated memory
+ * @nmemb: inut
+ * @size: input
+ * Return: pointer
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
