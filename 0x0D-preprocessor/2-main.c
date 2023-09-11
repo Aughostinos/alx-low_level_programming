@@ -1,9 +1,6 @@
-#include <stido.h>
-/**
- * main - entery point
- */
-int main()
-{
-	printf("File s%\n",__FILE__);
-	return (0);
+#include <stdio.h>
+
+int main() {
+    printf("Compiled from file: %s\n", __FILE__);
+    return 0;
 }
