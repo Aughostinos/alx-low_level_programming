@@ -2,7 +2,8 @@
 /**
  * main - entery point
  */
-int main (void)
+int main()
 {
 	printf("File s%\n",__FILE__);
+	return (0);
 }
