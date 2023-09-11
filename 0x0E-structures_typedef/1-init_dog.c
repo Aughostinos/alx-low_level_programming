@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include "dog.h"
 
 // Define the struct dog
 struct dog {
