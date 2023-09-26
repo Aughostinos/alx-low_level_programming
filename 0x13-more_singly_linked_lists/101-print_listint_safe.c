@@ -1,4 +1,5 @@
 #include "lists.h"
+#include <stdint.h>
 
 /**
  * print_listint_safe - Prints a listint_t linked list safely
@@ -8,33 +9,26 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	const listint_t *slow = head, *fast = head;
+	const listint_t *current = head;
 	size_t count = 0;
-	int loop_detected = 0;
+	uintptr_t hash_table[1024] = {0};
 
-	while (fast != NULL && fast->next != NULL)
+	while (current != NULL)
 	{
-		slow = slow->next;
-		fast = fast->next->next;
+		uintptr_t current_address = (uintptr_t)current;
 
-		if (slow == fast)
-		{
-			loop_detected = 1;
-			break;
-		}
-	}
-
-	if (loop_detected)
+		if (hash_table[current_address % 1024] == current_address)
 	{
 		printf("Linked list is a loop, exiting...\n");
 		exit(98);
 	}
 
-	while (head != NULL)
-	{
-		printf("%d\n", head->n);
-		head = head->next;
-		count++;
+	printf("%d\n", current->n);
+	count++;
+
+	hash_table[current_address % 1024] = current_address;
+
+	current = current->next;
 	}
 
 	return (count);
