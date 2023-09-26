@@ -22,7 +22,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 
 	if (*head == NULL)
 	{
-		*head = new_node; // If the list is empty, make the new node the head
+		*head = new_node; 
 	}
 	else
 	{
