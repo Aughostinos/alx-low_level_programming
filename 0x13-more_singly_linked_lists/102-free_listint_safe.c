@@ -1,10 +1,11 @@
 #include "lists.h"
 #include <stdint.h>
-#include <stddef.h> 
+#include <stddef.h>
 #include <stdlib.h>
 
 /**
- * free_listint_safe - Frees a listint_t linked list safely, avoiding issues with loops.
+ * free_listint_safe - Frees a listint_t linked list safely
+ * avoiding issues with loops.
  * @h: Pointer to a pointer to the head of the list.
  * Return: The size of the list that was freed.
  */
@@ -19,11 +20,12 @@ size_t free_listint_safe(listint_t **h)
 		uintptr_t current_address = (uintptr_t)current;
 
 		if (hash_table[current_address % 1024] == current_address)
-	{
-            return (count);
-        }
+		{
+			return (count);
+		}
 
 	listint_t *next = current->next;
+
 	free(current);
 	count++;
 
@@ -32,6 +34,6 @@ size_t free_listint_safe(listint_t **h)
 	current = next;
 	}
 
-	*h = NULL; // Set the head to NULL to indicate an empty list
-	return count;
+	*h = NULL;
+	return (count);
 }
