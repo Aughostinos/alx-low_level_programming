@@ -24,8 +24,8 @@ listint_t *find_listint_loop(listint_t *head)
 				loop_node = loop_node->next;
 				slow = slow->next;
 			}
-            
-		return loop_node;
+
+			return (loop_node);
 		}
 	}
 
