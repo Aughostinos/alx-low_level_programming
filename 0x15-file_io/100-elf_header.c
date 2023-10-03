@@ -56,6 +56,7 @@ int main(int argc, char *argv[])
 	}
 
 	int fd = open(argv[1], O_RDONLY);
+
 	if (fd == -1)
 	{
 		fprintf(stderr, "Error opening file: %s\n", strerror(errno));
@@ -63,6 +64,7 @@ int main(int argc, char *argv[])
 	}
 
 	Elf64_Ehdr header;
+
 	if (read(fd, &header, sizeof(header)) != sizeof(header))
 	{
 		fprintf(stderr, "Error reading ELF header: %s\n", strerror(errno));
