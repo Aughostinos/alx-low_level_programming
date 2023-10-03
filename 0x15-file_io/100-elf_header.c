@@ -222,7 +222,7 @@ void print_type(Elf64_Ehdr h)
 
 /**
  * print_entry - prints the ELF entry point address
- * 
+ *
  * @h: the ELF header struct
  */
 void print_entry(Elf64_Ehdr h)
