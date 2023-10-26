@@ -1,9 +1,9 @@
 #include "main.h"
-/*
+/**
  * binary_to_uint - converts binary number to decimel.
  * @b: pointer to a string that contain the binary number.
- * Description: this function uses bitwise operators to convert binary
- * to decimel
+ *
+ * Description: function uses bitwise operators to convert binary to decimel.
  * Return: the converted number, or 0
 */
 
