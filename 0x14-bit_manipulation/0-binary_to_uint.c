@@ -20,7 +20,7 @@ unsigned int binary_to_uint(const char *b)
 	{
 		/*set a condion to return 0 if the string has any char except 0 or 1*/
 		if (*b != '0' && *b != '1')
-			return (0);			
+			return (0);
 		/*convert binary to decimel*/
 		converted_n = (converted_n << 1) | (*b - '0');
 		b++;
