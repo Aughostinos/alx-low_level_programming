@@ -8,7 +8,7 @@
  * flip to get from one number to another.
  * Return: the number of bits.
  */
-unsigned int flip_bits(unsigned long int n, unsigned long int m);
+unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned long int exor_output = n ^ m;
 	int counter = 0;
