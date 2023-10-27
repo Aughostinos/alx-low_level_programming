@@ -11,9 +11,11 @@
 int set_bit(unsigned long int *n, unsigned int index)
 {
 	/*check if index is in range*/
-	if (index < (sizeof(unsigned long int) * 8))
+	if (index < (sizeof(unsigned long int) * 8) && index != NULL)
+	{
 		/*set the bit at the specified index to 1*/
 		*n |= (1UL << index);
+	}
 	return (-1);
 
 }
