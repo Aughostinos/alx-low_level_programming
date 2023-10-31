@@ -12,22 +12,29 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	int _file, content, text_len;
 
-	if (filename == NULL || text_content == NULL)
+	if (filename == NULL)
 		return (-1);
 
 	_file = open(filename, O_WRONLY | O_APPEND);
 	if (_file == -1)
 		return (-1);
 
-	text_len = strlen(text_content);
-
-	content = write(_file, text_content, text_len);
-	if (content == -1)
+	if (text_content == NULL)
 	{
-		close(_file);
 		return (-1);
 	}
+	else
+	{
+		text_len = strlen(text_content);
 
+		content = write(_file, text_content, text_len);
+		if (content == -1)
+		{
+			close(_file);
+			return (-1);
+		}
+	}
 	close(_file);
 	return (1);
 }
+
