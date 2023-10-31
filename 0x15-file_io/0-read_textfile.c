@@ -1,48 +1,48 @@
 #include "main.h"
-
 /**
- * read_textfile - Reads and prints the contents of a text file.
- * @filename: The name of the file to read.
- * @letters: The number of letters to read and print.
- *
- * Return: The actual number of letters read and printed, 0 on failure.
- */
+ * read_textfile - reads a text file and prints
+ * it to the POSIX standard output
+ * @filename: file pointer
+ * @letters: the number of letters it should read and print
+ * Return: the actual number of letters it could read and print
+*/
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd, read_chars, write_chars;
-	char *buffer;
+	int open_file, read_litters, write_letters;
+	char *buf;
 
 	if (filename == NULL)
 		return (0);
 
-	buffer = malloc(letters);
-	if (buffer == NULL)
+	buf = malloc(letters);
+	if (buf == NULL)
 		return (0);
 
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
+	open_file = open(filename, O_RDONLY);
+	if (open_file == -1)
 	{
-		free(buffer);
+		free(buf);
 		return (0);
 	}
 
-	read_chars = read(fd, buffer, letters);
-	if (read_chars == -1)
+	read_litters = read(filename, buf, letters);
+	if (read_litters == -1)
 	{
-		free(buffer);
-		close(fd);
+		free(buf);
+		close(open_file);
 		return (0);
 	}
 
-	write_chars = write(STDOUT_FILENO, buffer, read_chars);
-	if (write_chars == -1 || write_chars != read_chars)
+	write_letters = write(STDOUT_FILENO, buf, read_litters);
+	if (write_letters == -1 || write_letter != read_letter)
 	{
-		free(buffer);
-		close(fd);
+		free(buf);
+		close(open_file);
 		return (0);
 	}
 
-	free(buffer);
-	close(fd);
-	return (read_chars);
+	free(buf);
+	close(open_file);
+	return (write_letters);
 }
