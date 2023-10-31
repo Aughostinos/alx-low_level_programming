@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * read_textfile - reads a text file and prints
  * it to the POSIX standard output
@@ -9,39 +10,40 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int open_file;
-	ssize_t read_litters, write_letters;
-	char *buf;
+	int _file, read_letters, written_letters;
+	char *buff;
 
 	if (filename == NULL)
 		return (0);
 
-	open_file = open(filename, O_RDONLY);
-	if (open_file == -1)
+	buff = malloc(letters);
+	if (buff == NULL)
 		return (0);
 
-	buf = malloc(letters);
-	if (buf == NULL)
-		close(open_file);
-		return (0);
-
-	read_litters = read(filename, buf, letters);
-	if (read_litters == -1)
+	_file = open(filename, O_RDONLY);
+	if (_file == -1)
 	{
-		free(buf);
-		close(open_file);
+		free(buff);
 		return (0);
 	}
 
-	write_letters = write(STDOUT_FILENO, buf, read_litters);
-	if (write_letters == -1 || write_letters != read_letters)
+	read_letters = read(_file, buff, letters);
+	if (read_letters == -1)
 	{
-		free(buf);
-		close(open_file);
+		free(buff);
+		close(_file);
 		return (0);
 	}
 
-	free(buf);
-	close(open_file);
-	return (write_letters);
+	written_letters = write(STDOUT_FILENO, buff, read_letters);
+	if (written_letters == -1 || written_letters != read_letters)
+	{
+		free(buff);
+		close(_file);
+		return (0);
+	}
+
+	free(buff);
+	close(_file);
+	return (read_letters);
 }
