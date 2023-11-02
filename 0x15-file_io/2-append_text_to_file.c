@@ -8,33 +8,35 @@
  *
  * Return: 1 on success, -1 on failure.
  */
+
 int append_text_to_file(const char *filename, char *text_content)
 {
-	FILE *_file;
-	int content, text_len;
+	FILE *file_pointer;
+	int content_length, append_content;
 
 	if (filename == NULL)
 		return (-1);
-
-	_file = fopen(filename, "a");
-	if (_file == -1)
-		return (-1);
-
 	if (text_content == NULL)
 	{
+		if (filename == -1)
+			return (-1);
+		else
+			return (1);
+	}
+
+	file_pointer = fopen("filename", "a");
+	if (file_pointer == NULL)
+		return (-1);
+
+	content_length = strlen(text_content);
+	append_content = fwrite(text_content, 1, content_length, file_pointet);
+
+	if (append_content != content_length)
+	{
+		fclose(file_pointer);
 		return (-1);
 	}
-	else
-	{
-		text_len = strlen(text_content);
 
-		content = write(_file, text_content, text_len);
-		if (content == -1)
-		{
-			close(_file);
-			return (-1);
-		}
-	}
-	close(_file);
+	fclose(file_pointer);
 	return (1);
 }
