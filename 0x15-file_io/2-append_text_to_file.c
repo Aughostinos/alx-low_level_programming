@@ -10,12 +10,13 @@
  */
 int append_text_to_file(const char *filename, char *text_content)
 {
-	int _file, content, text_len;
+	FILE *_file;
+	int content, text_len;
 
 	if (filename == NULL)
 		return (-1);
 
-	_file = fopen(filename, O_WRONLY | O_APPEND);
+	_file = fopen(filename, "a");
 	if (_file == -1)
 		return (-1);
 
