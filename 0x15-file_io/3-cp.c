@@ -23,20 +23,20 @@ int main(int argc, char *argv[])
 	cp_from = open(argv[1], O_RDONLY);
 	if (cp_from == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n");
+		dprintf(2, "Error: Can't read from file \n");
 		exit(98);
 	}
 
 	cp_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (cp_to == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n");
+		dprintf(2, "Error: Can't write to \n");
 		exit(99);
 	}
 	file_read = read(cp_from, buffer, BUFFER_SIZE);
 	if (file_read == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n");
+		dprintf(2, "Error: Can't read from file \n");
 		exit(98);
 	}
 
@@ -45,20 +45,20 @@ int main(int argc, char *argv[])
 		file_written = write(cp_to, buffer, file_read);
 		if (file_written == -1)
 		{
-			dprintf(2, "Error: Can't write to %s\n");
+			dprintf(2, "Error: Can't write to \n");
 			exit(99);
 		}
 	}
 
 	if (close(cp_from) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n");
+		dprintf(2, "Error: Can't close fd \n");
 		exit(100);
 	}
 
 	if (close(cp_to) == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n");
+		dprintf(2, "Error: Can't close fd \n");
 		exit(100);
 	}
 
