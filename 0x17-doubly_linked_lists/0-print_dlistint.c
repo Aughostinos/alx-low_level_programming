@@ -9,13 +9,13 @@
 
 size_t print_dlistint(const dlistint_t *h)
 {
-    int counter = 0;
-    struct Node* current = h;
+	size_t counter = 0;
 
-    while (current != NULL)
-    {
-        counter++;
-        current = current -> next;
-    }
-    printf(counter);
+	while (h != NULL)
+	{
+		printf("%d\n", h->n);
+		counter++;
+		h = h->next;
+	}
+	return (counter);
 }
