@@ -1,27 +1,27 @@
 #include <stdio.h>
 
-int sum(int a, int b)
+int add(int a, int b)
 {
 	int result = a + b;
 
 	return (result);
 }
 
-int subtact(int a, int b)
+int sub(int a, int b)
 {
 	int result = a - b;
 
 	return (result);
 }
 
-int multiply(int a, int b)
+int mul(int a, int b)
 {
 	int result = a * b;
 
 	return (result);
 }
 
-int division(int a, int b)
+int div(int a, int b)
 {
 	if (b != 0)
 	{
@@ -33,7 +33,7 @@ int division(int a, int b)
 		printf("Error");
 }
 
-int modulus(int a, int b)
+int mod(int a, int b)
 {
 	if (b != 0)
 	{
