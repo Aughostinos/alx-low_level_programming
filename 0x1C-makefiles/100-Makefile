@@ -10,7 +10,7 @@ all: $(NAME)
 
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 clean:
 	/bin/rm -f  *~ $(NAME)
