@@ -3,7 +3,6 @@ SRC = school.c
 SRC += main.c
 OBJ = $(SRC:.c=.o) 
 NAME = school
-RM = rm -f
 
 export CFLAGS=-Wall -Werror -Wextra -pedantic
 
@@ -14,10 +13,10 @@ $(NAME): $(OBJ)
 	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 
 clean:
-	$(RM) *~ $(NAME)
+	/bin/rm -f  *~ $(NAME)
 
 oclean:
-	$(RM) $(OBJ)
+	/bin/rm -f $(OBJ)
 
 fclean: clean oclean
 
