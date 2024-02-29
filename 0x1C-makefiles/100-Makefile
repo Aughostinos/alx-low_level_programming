@@ -3,13 +3,14 @@ SRC = school.c
 SRC += main.c
 OBJ = $(SRC:.c=.o) 
 NAME = school
+HD = m.h
 
 export CFLAGS=-Wall -Werror -Wextra -pedantic
 
 all: $(NAME)
 
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ)|$(HD)
 	$(CC) $(OBJ) -o $(NAME)
 
 clean:
